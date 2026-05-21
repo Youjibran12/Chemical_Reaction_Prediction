@@ -1,0 +1,11 @@
+torch
+transformers
+gradio
+rdkit-pypi
+numpy
+pandas
+matplotlib
+scikit-learn
+nltk
+tqdm
+datasets

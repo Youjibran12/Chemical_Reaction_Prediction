@@ -1,0 +1,6 @@
+input,actual,tf_prediction,gru_prediction,ensemble_prediction
+COC(=O)CCc1ccc(O)cc1.Cc1cc(OC2CCCCO2)cc(C)c1-c1cccc(CO)c1.C1CCOC1.CCOC(=O)N=NC(=O)OCC.c1ccc(P(c2ccccc2)c2ccccc2)cc1,COC(=O)CCc1ccc(OCc2cccc(-c3c(C)cc(OC4CCCCO4)cc3C)c2)cc1,COC(=O)CCc1ccc(OCc2cccc(-c3c(C)cc(OC4CCCCO4)cc3C)c2)cc1,COC(=O)CCc1ccc(OCc2cccc(-c3c(C)cc(OC4CCCCO4)cc3C)c2)cc1,COC(=O)CCc1ccc(OCc2cccc(-c3c(C)cc(OC4CCCCO4)cc3C)c2)cc1
+Cc1ccccc1C=O.[NH3+]O.CCO.O.O=C(O)CC(O)(CC(=O)O)C(=O)O.[Cl-].[Na+].[OH-],Cc1ccccc1C=NO,Cc1ccccc1C=NO,Cc1ccccc1C=NO,Cc1ccccc1C=NO
+COc1cccc2c1CC1=C(O2)C(=O)N([C@@H](CC2CCCCC2)C(=O)O)C1.Nc1nccs1.ClCCl.O.On1nnc2ccccc21,COc1cccc2c1CC1=C(O2)C(=O)N([C@@H](CC2CCCCC2)C(=O)Nc2nccs2)C1,COc1cccc2c1CC1=C(O2)C(=O)N([C@@H](CC2CCCCC2)C(=O)Nc2nccs2)C1,COc1cccc2c1CC1=C(O2)C(=O)N([C@@H](CC2CCCCC2)C(=O)Nc2nccs2)C1,COc1cccc2c1CC1=C(O2)C(=O)N([C@@H](CC2CCCCC2)C(=O)Nc2nccs2)C1
+O=[N+]([O-])c1cccc(/C=C/c2cncc(Br)c2)c1.CCO.O.O=C[O-].[Fe].[NH4+],Nc1cccc(/C=C/c2cncc(Br)c2)c1,O=[N+]([O-])c1cccc(/C=C/c2cncc(Br)c2)c1,Nc1cccc(/C=C/c2cncc(Br)c2)c1,Nc1cccc(/C=C/c2cncc(Br)c2)c1
+Cc1ccc(OCCCCN2CCN(c3cccc(Cl)c3Cl)CC2)cc1[N+](=O)[O-].CCO.O.[Cl-].[Fe].[NH4+],Cc1ccc(OCCCCN2CCN(c3cccc(Cl)c3Cl)CC2)cc1N,Cc1ccc(OCCCCN2CCN(c3cccc(Cl)c3Cl)CC2)cc1N,Cc1ccc(OCCCCN2CCN(c3cccc(Cl)c3Cl)CC2)cc1N,Cc1ccc(OCCCCN2CCN(c3cccc(Cl)c3Cl)CC2)cc1N

@@ -65,3 +65,16 @@ def load_ensemble_from_disk(gru_path, tf_path, device=None,
     return EnsemblePredictor(gru_pred, tf_pred,
                               gru_weight=gru_weight,
                               transformer_weight=transformer_weight)
+
+
+ensemble = load_ensemble_from_disk(
+    'gru_model.pt',
+    'transformer_model.pt',
+    gru_weight=0.7,
+    transformer_weight=0.3
+)
+pred = ensemble.predict('CCO.O>>')
+print(pred)
+
+gru_predictor = ensemble.gru
+tf_predictor  = ensemble.tf

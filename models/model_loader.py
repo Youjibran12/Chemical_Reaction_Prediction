@@ -20,6 +20,7 @@ def save_models(gru_predictor, tf_predictor, save_dir='saved_models'):
     }, os.path.join(save_dir, 'transformer_model.pt'))
     print(f'Transformer saved → {save_dir}/transformer_model.pt')
 
+from huggingface_hub import hf_hub_download
 
 def load_ensemble_from_disk(gru_path, tf_path, device=None,
                              gru_weight=0.4, transformer_weight=0.6):
@@ -28,6 +29,17 @@ def load_ensemble_from_disk(gru_path, tf_path, device=None,
         device = 'cuda' if torch.cuda.is_available() else 'cpu'
     device = torch.device(device)
 
+    
+
+    gru_path = hf_hub_download(
+        repo_id="saketjaju24/chemical-reaction-model",
+        filename="gru_model.pt"
+    )
+
+    tf_path = hf_hub_download(
+        repo_id="saketjaju24/chemical-reaction-model",
+        filename="transformer_model.pt"
+    )
     gru_ckpt = torch.load(gru_path,  map_location=device, weights_only=True)
     tf_ckpt  = torch.load(tf_path,   map_location=device, weights_only=True)
 

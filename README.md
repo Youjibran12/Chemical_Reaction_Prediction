@@ -1,3 +1,16 @@
+---
+title: ChemRxn Deep Learning
+emoji: 🧪
+colorFrom: blue
+colorTo: green
+sdk: gradio
+sdk_version: 5.31.0
+app_file: app.py
+pinned: false
+---
+
+
+
 # Chemical Reaction Prediction
 ### Hybrid GRU + Transformer Ensemble for Chemical Reaction Prediction
 

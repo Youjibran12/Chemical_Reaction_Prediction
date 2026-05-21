@@ -9,3 +9,4 @@ scikit-learn
 nltk
 tqdm
 datasets
+huggingface_hub

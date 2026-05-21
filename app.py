@@ -1,3 +1,3 @@
-from gradio_app.interface import demo
+from gradio_app.app import demo
 
 demo.launch()

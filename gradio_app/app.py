@@ -12,6 +12,13 @@ from rdkit import Chem
 from rdkit.Chem import Draw, Descriptors, rdMolDescriptors, AllChem, DataStructs
 from rdkit.Chem.Draw import rdMolDraw2D
 
+import pickle
+
+try:
+    with open("saved_models/test_reactions.pkl", "rb") as f:
+        test_reactions = pickle.load(f)
+except Exception:
+    test_reactions = []
 # ─────────────────────────────────────────────────────────────────────────────
 #  Reaction type classifier  (SMARTS-based heuristics)
 # ─────────────────────────────────────────────────────────────────────────────

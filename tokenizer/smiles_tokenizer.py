@@ -1,3 +1,5 @@
+import re
+
 SMILES_REGEX = re.compile(
     r'(\[[^\]]+\]'
     r'|Br|Cl|Si|Se|se'

@@ -14,6 +14,8 @@ from rdkit.Chem.Draw import rdMolDraw2D
 
 import pickle
 
+from models.model_loader import ensemble, gru_predictor, tf_predictor
+
 try:
     with open("saved_models/test_reactions.pkl", "rb") as f:
         test_reactions = pickle.load(f)
@@ -1414,7 +1416,6 @@ with gr.Blocks(title="Chemical Reaction Predictor", theme=gr.themes.Soft()) as d
             interactive=False,
             lines=3,
             max_lines=10,
-            show_copy_button=True,
         )
 
         candidates_out = gr.Textbox(
@@ -1422,7 +1423,7 @@ with gr.Blocks(title="Chemical Reaction Predictor", theme=gr.themes.Soft()) as d
             interactive=False,
             lines=15,
             max_lines=50,
-            show_copy_button=True,
+            # Removed unsupported argument
         )
 
         metrics_out  = gr.Textbox(label="Match metrics", lines=9, interactive=False)
@@ -1430,7 +1431,7 @@ with gr.Blocks(title="Chemical Reaction Predictor", theme=gr.themes.Soft()) as d
 
         rxn_smarts_out = gr.Textbox(
             label="Reaction SMARTS (reactant>>product)",
-            interactive=False, lines=2, show_copy_button=True
+            interactive=False, lines=2
         )
 
         validate_out = gr.Textbox(
@@ -1530,11 +1531,11 @@ with gr.Blocks(title="Chemical Reaction Predictor", theme=gr.themes.Soft()) as d
         with gr.Row():
             reactant_disp  = gr.Textbox(
                 label="Reactant SMILES", interactive=False,
-                lines=2, show_copy_button=True
+                lines=2
             )
             predicted_disp = gr.Textbox(
                 label="Predicted product", interactive=False,
-                lines=2, show_copy_button=True
+                lines=2
             )
 
         metrics_disp = gr.Textbox(

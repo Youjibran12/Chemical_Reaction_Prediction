@@ -1,3 +1,5 @@
+from models.reaction_predictor import ReactionPredictor
+
 # Load data
 gru_predictor = ReactionPredictor(model_type='gru')
 all_reactions = gru_predictor.load_data(100000)

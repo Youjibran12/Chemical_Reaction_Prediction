@@ -1,3 +1,6 @@
+import torch
+import torch.nn as nn
+
 class GRUEncoder(nn.Module):
     def __init__(self, vocab_size, embed_dim, hidden_dim, num_layers, dropout, padding_idx=0):
         super().__init__()

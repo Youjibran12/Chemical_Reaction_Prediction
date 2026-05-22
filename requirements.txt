@@ -1,7 +1,7 @@
 torch
 transformers
 gradio
-rdkit-pypi
+rdkit
 numpy
 pandas
 matplotlib

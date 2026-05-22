@@ -1,3 +1,12 @@
+import os
+import torch
+from huggingface_hub import hf_hub_download
+from tokenizer.smiles_tokenizer import SMILESTokenizer
+from models.reaction_predictor import ReactionPredictor
+from models.gru_seq2seq import GRUSeq2Seq
+from models.transformer_model import TransformerModel
+from models.ensemble_model import EnsemblePredictor
+
 def save_models(gru_predictor, tf_predictor, save_dir='saved_models'):
     os.makedirs(save_dir, exist_ok=True)
     torch.save({
@@ -85,8 +94,6 @@ ensemble = load_ensemble_from_disk(
     gru_weight=0.7,
     transformer_weight=0.3
 )
-pred = ensemble.predict('CCO.O>>')
-print(pred)
 
 gru_predictor = ensemble.gru
 tf_predictor  = ensemble.tf

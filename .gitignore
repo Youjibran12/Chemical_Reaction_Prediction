@@ -1,1 +1,8 @@
-﻿saved_models/transformer_model.pt
+__pycache__/
+.gradio/
+saved_models/*.pt
+saved_models/*.csv
+saved_models/*.json
+saved_models/*.pkl
+*.log
+.env
